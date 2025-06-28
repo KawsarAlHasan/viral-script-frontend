@@ -96,9 +96,11 @@ const ScriptSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-14">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-600 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#111827] via-[#ff3898] to-purple-600 dark:from-[#ededed] bg-clip-text text-transparent mb-6">
             Viral UGC Scripts
           </h1>
+
+    
 
           <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
             Ready-to-use scripts that have generated millions of views. Simply
@@ -112,7 +114,7 @@ const ScriptSection = () => {
             <select
               value={selectedNiche}
               onChange={(e) => setSelectedNiche(e.target.value)}
-              className="input-field appearance-none rounded-lg px-6 py-3 pr-12 font-medium min-w-48 focus:outline-none focus:ring-2 focus:ring-[var(--firstColor)]"
+              className="input-field appearance-none rounded-lg px-6 py-3 pr-12 font-medium min-w-48 focus:outline-none focus:ring-2 focus:ring-[#ff3898]"
             >
               {categories.map((category) => (
                 <option key={category} value={category}>
@@ -143,13 +145,13 @@ const ScriptSection = () => {
                   >
                     {script.category}
                   </span>
-                  <button className="p-2 rounded-lg hover:bg-[var(--card-hover)] transition-colors">
-                    <Bookmark className="w-4 h-4 text-[var(--text-muted)] hover:text-[var(--firstColor)]" />
+                  <button className="p-2 rounded-lg hover:bg-[#f9fafb] dark:hover:bg-[#2a2a2a] transition-colors">
+                    <Bookmark className="w-4 h-4 text-[#9ca3af] dark:text-[#71717a] hover:text-[#ff3898]" />
                   </button>
                 </div>
 
                 {/* Script Title */}
-                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-[var(--firstColor)] transition-colors duration-300">
+                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-[#ff3898] transition-colors duration-300">
                   {script.title}
                 </h3>
 

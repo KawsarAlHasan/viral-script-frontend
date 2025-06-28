@@ -44,9 +44,8 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] shadow-sm py-4 lg:px-[120px]">
+      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95  border-b border-[#e5e7eb] dark:border-[#2a2a2a] shadow-sm py-4 lg:px-[120px]">
         <div className="navbar-start">
-          <button onClick={()=> setDarkMode(!darkMode)}>Toggle</button>
           {/* logo */}
           <button
             onClick={hinddleOnClick}
@@ -63,14 +62,14 @@ const Navbar = () => {
                 </svg>
               </div>
               <div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-[var(--secondColor)] rounded-full animate-pulse"
+                className="absolute -top-1 -right-1 w-4 h-4 bg-[#00ff8c] rounded-full animate-pulse"
                 style={{ animation: "pulse-glow 2s ease-in-out infinite" }}
               ></div>
             </div>
             <div>
               <h2 className="text-2xl font-bold logo-gradient leading-tight">
                 ViralScript
-                <span className="text-[var(--firstColor)]">Library</span>
+                <span className="text-[#ff3898]">Library</span>
               </h2>
             </div>
           </button>
@@ -81,7 +80,7 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={item.href}
-                  className="nav-link text-[var(--navbar-text)] hover:text-[var(--firstColor)] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                  className="nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
                 >
                   {item.name}
                 </Link>
@@ -117,7 +116,7 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={item.href}
-                    className="nav-link text-[var(--navbar-text)] hover:text-[var(--firstColor)] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                    className="nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
                   >
                     {item.name}
                   </Link>
@@ -126,7 +125,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/login"
-                  className="nav-link text-[var(--navbar-text)] hover:text-[var(--firstColor)] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                  className="nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
                 >
                   Login
                 </Link>
@@ -134,13 +133,13 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/signup"
-                  className="group font-semibold md:px-6 rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[var(--firstColor)] px-4 py-2 transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer"
+                  className="group font-semibold md:px-6 rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[#ff3898] px-4 py-2 transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer"
                 >
                   AI Generator
                 </Link>
               </li>
               <li>
-                <ThemeSwitcher />
+                <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
               </li>
             </ul>
           </div>
@@ -148,13 +147,13 @@ const Navbar = () => {
 
         <div className="navbar-end hidden lg:flex ">
           <div className="mr-4">
-            <ThemeSwitcher />
+            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
           </div>
           <ul className="flex items-center gap-4">
             <li>
               <Link
                 href="/login"
-                className="nav-link text-[var(--navbar-text)] hover:text-[var(--firstColor)] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                className="nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
               >
                 Login
               </Link>
@@ -163,7 +162,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/signup"
-                className="group font-semibold md:px-6 rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[var(--firstColor)] px-4 py-2 transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer"
+                className="group font-semibold md:px-6 rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[#ff3898] px-4 py-2 transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer"
               >
                 AI Generator
               </Link>

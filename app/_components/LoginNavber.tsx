@@ -33,14 +33,14 @@ const LoginNavber = () => {
                 </svg>
               </div>
               <div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-[var(--secondColor)] rounded-full animate-pulse"
+                className="absolute -top-1 -right-1 w-4 h-4 bg-[#00ff8c] rounded-full animate-pulse"
                 style={{ animation: "pulse-glow 2s ease-in-out infinite" }}
               ></div>
             </div>
             <div>
               <h2 className="text-2xl font-bold logo-gradient leading-tight">
                 ViralScript
-                <span className="text-[var(--firstColor)]">Library</span>
+                <span className="text-[#ff3898]">Library</span>
               </h2>
             </div>
           </button>

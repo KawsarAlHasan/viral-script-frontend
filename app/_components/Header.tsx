@@ -66,13 +66,13 @@ const Header = () => {
                 <span className="block transform hover:scale-105 transition-transform duration-300">
                   Unlock the Secret to
                 </span>
-                <span className="block text-[var(--firstColor)] bg-gradient-to-r from-[var(--firstColor)] to-purple-600 bg-clip-text animate-pulse">
+                <span className="block text-[#ff3898] bg-gradient-to-r from-[#ff3898] to-purple-600 bg-clip-text animate-pulse">
                   Viral UGC Videos
                 </span>
               </h1>
               <div className="flex items-center gap-2 mt-4">
-                <div className="h-1 w-20 bg-gradient-to-r from-[var(--firstColor)] to-purple-600 rounded-full"></div>
-                <Zap className="w-5 h-5 text-[var(--firstColor)] animate-bounce" />
+                <div className="h-1 w-20 bg-gradient-to-r from-[#ff3898] to-purple-600 rounded-full"></div>
+                <Zap className="w-5 h-5 text-[#ff3898] animate-bounce" />
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const Header = () => {
                     key={index}
                     className={`flex items-center gap-2 p-3 rounded-xl transition-all duration-500 ${
                       activeStats === index
-                        ? "card shadow-lg scale-105 border-2 border-[var(--firstColor)]/20"
+                        ? "card shadow-lg scale-105 border-2 border-[#ff3898]/20"
                         : "card hover:shadow-md"
                     }`}
                   >
@@ -123,7 +123,7 @@ const Header = () => {
                   </div>
                 </button>
 
-                <button className="cursor-pointer group bg-[var(--secondColor)] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[var(--firstColor)]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <button className="cursor-pointer group bg-[#00ff8c] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[#ff3898]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   <div className="flex items-center gap-2">
                     Generate Your Own
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -162,7 +162,7 @@ const Header = () => {
                       modal.showModal();
                     }
                   }}
-                  className="cursor-pointer group bg-[var(--secondColor)] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[var(--firstColor)]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="cursor-pointer group bg-[#00ff8c] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[#ff3898]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <div className="flex items-center gap-2">
                     Generate Your Own
@@ -181,7 +181,7 @@ const Header = () => {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 border-2 border-[var(--card-bg)]"
+                      className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 border-2 border-[#ffffff] dark:border-[#1a1a1a]"
                     ></div>
                   ))}
                 </div>
@@ -209,11 +209,11 @@ const Header = () => {
           >
             <div className="relative group">
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[var(--firstColor)]/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[#ff3898]/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
 
               {/* Floating Action Buttons */}
-              <div className="absolute -top-6 -right-6 card rounded-full p-3 shadow-lg animate-bounce border border-[var(--firstColor)]/20">
-                <TrendingUp className="w-6 h-6 text-[var(--firstColor)]" />
+              <div className="absolute -top-6 -right-6 card rounded-full p-3 shadow-lg animate-bounce border border-[#ff3898]/20">
+                <TrendingUp className="w-6 h-6 text-[#ff3898]" />
               </div>
 
               <div className="absolute -bottom-6 -left-6 card rounded-full p-3 shadow-lg animate-pulse border border-purple-600/20">
@@ -231,11 +231,11 @@ const Header = () => {
               >
                 <div className="relative group">
                   {/* Decorative Elements */}
-                  <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[var(--firstColor)]/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[#ff3898]/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
 
                   {/* Floating Action Buttons */}
-                  <div className="absolute -top-6 -right-6 card rounded-full p-3 shadow-lg animate-bounce border border-[var(--firstColor)]/20">
-                    <TrendingUp className="w-6 h-6 text-[var(--firstColor)]" />
+                  <div className="absolute -top-6 -right-6 card rounded-full p-3 shadow-lg animate-bounce border border-[#ff3898]/20">
+                    <TrendingUp className="w-6 h-6 text-[#ff3898]" />
                   </div>
 
                   <div className="absolute -bottom-6 -left-6 card rounded-full p-3 shadow-lg animate-pulse border border-purple-600/20">
@@ -262,7 +262,7 @@ const Header = () => {
                   {/* Success Metrics Floating Card */}
                   <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-4 shadow-lg animate-pulse">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-[var(--firstColor)]">
+                      <div className="text-2xl font-bold text-[#ff3898]">
                         98%
                       </div>
                       <div className="text-xs text-secondary">Success Rate</div>
@@ -274,7 +274,7 @@ const Header = () => {
               {/* Success Metrics Floating Card */}
               <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-4 shadow-lg animate-pulse">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[var(--firstColor)]">
+                  <div className="text-2xl font-bold text-[#ff3898]">
                     98%
                   </div>
                   <div className="text-xs text-secondary">Success Rate</div>

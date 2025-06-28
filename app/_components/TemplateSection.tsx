@@ -118,7 +118,7 @@ const TemplateSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-14">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-600 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#111827] via-[#ff3898] dark:from-[#ededed] to-purple-600 bg-clip-text text-transparent mb-6">
             Downloadable Templates
           </h1>
 
@@ -169,10 +169,10 @@ const TemplateSection = () => {
                   </div>
 
                   <div className="flex items-center gap-2 mb-3">
-                    <h3 className="text-xl font-bold text-primary group-hover:text-[var(--firstColor)] transition-all duration-300">
+                    <h3 className="text-xl font-bold text-primary group-hover:text-[#ff3898] transition-all duration-300">
                       {template.title}
                     </h3>
-                    <span className="text-xs px-2 py-1 bg-[var(--section-bg)] rounded-full text-muted border border-[var(--border-color)]">
+                    <span className="text-xs px-2 py-1 bg-[#f9fafb] dark:bg-[#111111] rounded-full text-muted border border-[#e5e7eb] dark:border-[#2a2a2a]">
                       {getIconForDownloadType(template.downloadType)}{" "}
                       {template.downloadType}
                     </span>
@@ -184,7 +184,7 @@ const TemplateSection = () => {
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-[var(--section-bg)] rounded-2xl border border-[var(--border-color)]">
+                <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-2xl border border-[#e5e7eb] dark:border-[#2a2a2a]">
                   <div className="text-center">
                     <div className="text-lg font-bold text-primary">
                       {template.stats.downloads}
@@ -219,7 +219,7 @@ const TemplateSection = () => {
                         key={index}
                         className="flex items-center gap-2 text-sm text-secondary"
                       >
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-[var(--firstColor)] to-purple-500 rounded-full" />
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-[#ff3898] to-purple-500 rounded-full" />
                         {feature}
                       </div>
                     ))}

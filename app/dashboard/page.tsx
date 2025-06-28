@@ -172,15 +172,15 @@ const MemberDashboard = () => {
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${stat.color}`}>
                       <IconComponent className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-xs text-[var(--text-muted)]">{stat.trend}</span>
+                    <span className="text-xs text-[#9ca3af] dark:text-[#71717a]">{stat.trend}</span>
                   </div>
 
                   <div className="mb-3">
-                    <div className="text-2xl font-bold text-[var(--text-primary)] mb-1">{stat.value}</div>
-                    <div className="text-sm text-[var(--text-secondary)]">{stat.label}</div>
+                    <div className="text-2xl font-bold text-[#111827] dark:text-[#ededed] mb-1">{stat.value}</div>
+                    <div className="text-sm text-[#6b7280] dark:text-[#a1a1aa]">{stat.label}</div>
                   </div>
 
-                  <div className="w-full bg-[var(--border-color)] rounded-full h-2">
+                  <div className="w-full bg-[#e5e7eb] dark:bg-[#2a2a2a] rounded-full h-2">
                     <div
                       className={`h-2 rounded-full bg-gradient-to-r ${stat.color} transition-all duration-1000`}
                       style={{ width: `${stat.progress}%` }}
@@ -198,7 +198,7 @@ const MemberDashboard = () => {
               {/* Recent Scripts */}
               <div className="card backdrop-blur-sm rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-sm md:text-xl font-bold text-[var(--text-primary)]">Recent Scripts</h3>
+                  <h3 className="text-sm md:text-xl font-bold text-[#111827] dark:text-[#ededed]">Recent Scripts</h3>
                   <div className="flex gap-1 md:gap-2">
                     <button
                       onClick={() => setActiveTab('recent')}
@@ -219,7 +219,7 @@ const MemberDashboard = () => {
 
                 <div className="space-y-4">
                   {recentScripts.map((script) => (
-                    <div key={script.id} className="flex items-center gap-2 md:gap-4 p-2 md:p-4 bg-[var(--section-bg)] rounded-xl hover:bg-[var(--card-hover)] transition-colors group cursor-pointer">
+                    <div key={script.id} className="flex items-center gap-2 md:gap-4 p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[var(--card-hover)] transition-colors group cursor-pointer">
                       <div className="flex-shrink-0">
                         <div className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                           <Play className="w-5 h-5 text-white" />
@@ -228,7 +228,7 @@ const MemberDashboard = () => {
 
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                          <h4 className="text-sm md:text-lg font-semibold text-[var(--text-primary)] truncate">{script.title}</h4>
+                          <h4 className="text-sm md:text-lg font-semibold text-[#111827] dark:text-[#ededed] truncate">{script.title}</h4>
                           {script.trending && (
                             <div className="error text-xs px-2 py-1 rounded-full flex items-center gap-1">
                               <TrendingUp className="w-3 h-3" />
@@ -236,7 +236,7 @@ const MemberDashboard = () => {
                             </div>
                           )}
                         </div>
-                        <div className="hidden md:flex items-center gap-4 text-sm text-[var(--text-secondary)]">
+                        <div className="hidden md:flex items-center gap-4 text-sm text-[#6b7280] dark:text-[#a1a1aa]">
                           <span>{script.category}</span>
                           <div className="flex items-center gap-1">
                             <Eye className="w-3 h-3" />
@@ -250,7 +250,7 @@ const MemberDashboard = () => {
                       </div>
 
                       <div className="hidden md:flex items-center gap-2">
-                        <span className="text-xs text-[var(--text-muted)]">{script.timeAgo}</span>
+                        <span className="text-xs text-[#9ca3af] dark:text-[#71717a]">{script.timeAgo}</span>
                         <button className={`p-2 rounded-lg transition-colors ${script.saved ? 'bg-pink-100 text-pink-600' : 'btn-secondary'
                           }`}>
                           <Heart className={`w-4 h-4 ${script.saved ? 'fill-current' : ''}`} />
@@ -265,7 +265,7 @@ const MemberDashboard = () => {
             {/* Download Templates */}
             <div className="card backdrop-blur-sm rounded-2xl p-6">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-sm md:text-xl font-bold text-[var(--text-primary)]">Download Templates</h3>
+                <h3 className="text-sm md:text-xl font-bold text-[#111827] dark:text-[#ededed]">Download Templates</h3>
                 <button className="text-pink-500 hover:text-pink-600 text-xs md:text-sm font-medium flex items-center gap-1">
                   View All <ArrowRight className="w-4 h-4" />
                 </button>
@@ -273,14 +273,14 @@ const MemberDashboard = () => {
 
               <div className="space-y-3">
                 {downloadTemplates.map((template, index) => (
-                  <div key={index} className="flex items-center justify-between p-2 md:p-4 bg-[var(--section-bg)] rounded-xl hover:bg-[var(--card-hover)] transition-colors group">
+                  <div key={index} className="flex items-center justify-between p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[var(--card-hover)] transition-colors group">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <FileText className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
-                        <h4 className="text-sm md:text-normal font-medium text-[var(--text-primary)]">{template.name}</h4>
-                        <div className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                        <h4 className="text-sm md:text-normal font-medium text-[#111827] dark:text-[#ededed]">{template.name}</h4>
+                        <div className="flex items-center gap-2 text-xs text-[#6b7280] dark:text-[#a1a1aa]">
                           <span>{template.type}</span>
                           <span>•</span>
                           <span>{template.size}</span>
@@ -311,7 +311,7 @@ const MemberDashboard = () => {
      
             {/* Popular Niches */}
             <div className="card backdrop-blur-sm rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-6">Browse by Niche</h3>
+              <h3 className="text-xl font-bold text-[#111827] dark:text-[#ededed] mb-6">Browse by Niche</h3>
 
               <div className="space-y-3">
                 {niches.map((niche, index) => (
@@ -320,7 +320,7 @@ const MemberDashboard = () => {
                     onClick={() => setSelectedNiche(niche)}
                     className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-colors ${selectedNiche === niche
                       ? 'bg-pink-100 text-pink-800 border border-pink-200'
-                      : 'bg-[var(--section-bg)] text-[var(--text-secondary)] hover:bg-[var(--card-hover)]'
+                      : 'bg-[#f9fafb] dark:bg-[#111111] text-[#6b7280] dark:text-[#a1a1aa] hover:bg-[var(--card-hover)]'
                       }`}
                   >
                     {niche}
@@ -343,12 +343,12 @@ const MemberDashboard = () => {
                   </div>
 
                   <div className="flex-1">
-                    <h4 className="font-semibold text-[var(--text-primary)] mb-2">{action.title}</h4>
-                    <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">{action.description}</p>
+                    <h4 className="font-semibold text-[#111827] dark:text-[#ededed] mb-2">{action.title}</h4>
+                    <p className="text-sm text-[#6b7280] dark:text-[#a1a1aa] mb-4 leading-relaxed">{action.description}</p>
 
                     <button className={`text-sm font-medium flex items-center gap-1 transition-colors ${action.comingSoon
                       ? 'text-purple-500 hover:text-purple-600'
-                      : 'text-[var(--text-primary)] hover:text-[var(--firstColor)]'
+                      : 'text-[#111827] dark:text-[#ededed] hover:text-[#ff3898]'
                       }`}>
                       {action.action}
                       {!action.comingSoon && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}

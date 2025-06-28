@@ -14,5 +14,5 @@ export default function NavbarWrapper() {
 
   if (isDashboard || isSignup || isLogin || isPayment || isPricing) return null
 
-  return <Navbar />
+  return <Navbar2 />
 }

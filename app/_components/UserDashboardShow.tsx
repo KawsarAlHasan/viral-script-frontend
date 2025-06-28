@@ -4,11 +4,14 @@ const MemberDashboard = () => {
   return (
     <div className="  py-10 md:py-14 ">
       {/* Welcome Section */}
-      <h1 className="text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-900 bg-clip-text text-transparent mb-6">
+      <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#f9fafb] via-[#ff3898] to-purple-900 dark:from-[#111111] bg-clip-text text-transparent mb-6">
         Member Dashboard
       </h1>
 
-      <p className="text-center text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed mb-8">
+     
+
+
+      <p className="text-center text-lg md:text-xl text-[#6b7280] dark:text-[#a1a1aa] max-w-2xl mx-auto leading-relaxed mb-8">
         Once subscribed, you'll unlock your personal dashboard with powerful
         tools to create viral content.
       </p>

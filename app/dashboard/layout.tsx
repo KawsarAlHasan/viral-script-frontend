@@ -65,7 +65,7 @@ export default function RootLayout({
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center py-3 nav-link text-[var(--navbar-text)] hover:text-[var(--firstColor)] px-4  rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                  className="flex items-center py-3 nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4  rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
                 >
                   <item.icon className="w-5 h-5 mr-3" />
                   <span className="font-medium">{item.name}</span>

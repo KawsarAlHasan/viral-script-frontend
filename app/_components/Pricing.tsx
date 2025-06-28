@@ -68,7 +68,7 @@ const PricingAccess = () => {
       icon: Calendar,
       title: "Cancel anytime",
       subtitle: "No long-term contracts",
-      color: "text-[var(--text-secondary)]",
+      color: "text-[#6b7280] dark:text-[#a1a1aa]",
     },
     {
       icon: Zap,
@@ -114,11 +114,11 @@ const PricingAccess = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-900 bg-clip-text text-transparent mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#f9fafb] via-[#ff3898] to-purple-900 dark:from-[#111111] bg-clip-text text-transparent mb-6">
             Pricing & Access
           </h1>
 
-          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-[#6b7280] dark:text-[#a1a1aa] max-w-2xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your content creation needs. Unlock
             viral scripts that convert viewers into customers.
           </p>
@@ -127,10 +127,10 @@ const PricingAccess = () => {
           <div className="flex justify-center gap-2 md:gap-8 mb-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+                <div className="text-xl md:text-2xl font-bold text-[#111827] dark:text-[#ededed]">
                   {stat.value}
                 </div>
-                <div className="text-sm text-[var(--text-secondary)]">
+                <div className="text-sm text-[#6b7280] dark:text-[#a1a1aa]">
                   {stat.label}
                 </div>
               </div>
@@ -140,7 +140,7 @@ const PricingAccess = () => {
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <span
-              className={`font-medium ${billingPeriod === "monthly" ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"}`}
+              className={`font-medium ${billingPeriod === "monthly" ? "text-[#111827] dark:text-[#ededed]" : "text-[#6b7280] dark:text-[#a1a1aa]"}`}
             >
               Monthly
             </span>
@@ -150,10 +150,10 @@ const PricingAccess = () => {
                   billingPeriod === "monthly" ? "annual" : "monthly",
                 )
               }
-              className="relative w-16 h-8 bg-[var(--border-color)] rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="relative w-16 h-8 bg-[#e5e7eb] dark:bg-[#2a2a2a] rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div
-                className={`absolute top-1 left-1 w-6 h-6 bg-[var(--card-bg)] rounded-full shadow-md transform transition-transform duration-300 ${
+                className={`absolute top-1 left-1 w-6 h-6 bg-[#ffffff] dark:bg-[#1a1a1a] rounded-full shadow-md transform transition-transform duration-300 ${
                   billingPeriod === "annual"
                     ? "translate-x-8 bg-gradient-to-r from-blue-500 to-purple-500"
                     : ""
@@ -162,7 +162,7 @@ const PricingAccess = () => {
             </button>
             <div className="flex items-center gap-2">
               <span
-                className={`font-medium ${billingPeriod === "annual" ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"}`}
+                className={`font-medium ${billingPeriod === "annual" ? "text-[#111827] dark:text-[#ededed]" : "text-[#6b7280] dark:text-[#a1a1aa]"}`}
               >
                 Annual
               </span>
@@ -218,20 +218,20 @@ const PricingAccess = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-2">
+                  <h3 className="text-2xl font-bold text-[#111827] dark:text-[#ededed] mb-2">
                     {plan.name}
                   </h3>
 
                   <div className="flex items-center justify-center gap-2 mb-4">
-                    <span className="text-4xl font-bold text-[var(--text-primary)]">
+                    <span className="text-4xl font-bold text-[#111827] dark:text-[#ededed]">
                       ${plan.price}
                     </span>
                     <div className="text-left">
-                      <div className="text-sm text-[var(--text-secondary)]">
+                      <div className="text-sm text-[#6b7280] dark:text-[#a1a1aa]">
                         per month
                       </div>
                       {plan.originalPrice && (
-                        <div className="text-xs text-[var(--text-muted)] line-through">
+                        <div className="text-xs text-[#9ca3af] dark:text-[#71717a] line-through">
                           ${plan.originalPrice}
                         </div>
                       )}
@@ -253,7 +253,7 @@ const PricingAccess = () => {
                         className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
                           feature.included
                             ? "bg-green-100 text-green-600"
-                            : "bg-[var(--section-bg)] text-[var(--text-muted)]"
+                            : "bg-[#f9fafb] dark:bg-[#111111] text-[#9ca3af] dark:text-[#71717a]"
                         }`}
                       >
                         {feature.included ? (
@@ -266,7 +266,7 @@ const PricingAccess = () => {
                         <span
                           className={`text-sm ${
                             feature.included
-                              ? "text-[var(--text-primary)]"
+                              ? "text-[#111827] dark:text-[#ededed]"
                               : "textGray600"
                           }`}
                         >
@@ -306,15 +306,15 @@ const PricingAccess = () => {
                 className="flex items-center gap-4 card backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--section-bg)] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-[#f9fafb] dark:bg-[#111111] flex items-center justify-center">
                     <IconComponent className={`w-6 h-6 ${guarantee.color}`} />
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--text-primary)] mb-1">
+                  <h4 className="font-semibold text-[#111827] dark:text-[#ededed] mb-1">
                     {guarantee.title}
                   </h4>
-                  <p className="text-sm text-[var(--text-secondary)]">
+                  <p className="text-sm text-[#6b7280] dark:text-[#a1a1aa]">
                     {guarantee.subtitle}
                   </p>
                 </div>

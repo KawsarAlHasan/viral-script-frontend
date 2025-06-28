@@ -24,7 +24,7 @@ const DashboardNavbar = () => {
                 </svg>
               </div>
               <div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-[var(--secondColor)] rounded-full animate-pulse"
+                className="absolute -top-1 -right-1 w-4 h-4 bg-[#00ff8c] rounded-full animate-pulse"
                 style={{ animation: "pulse-glow 2s ease-in-out infinite" }}
               ></div>
             </div>
@@ -32,7 +32,7 @@ const DashboardNavbar = () => {
               <div>
                 <h2 className="text-2xl font-bold logo-gradient leading-tight">
                   ViralScript
-                  <span className="text-[var(--firstColor)]">Library</span>
+                  <span className="text-[#ff3898]">Library</span>
                 </h2>
               </div>
             </div>
@@ -40,7 +40,7 @@ const DashboardNavbar = () => {
         </div>
 
         {/* Welcome Message - Hidden on mobile */}
-        <div className="hidden md:flex items-center gap-2 text-sm text-[var(--text-secondary)] mx-4">
+        <div className="hidden md:flex items-center gap-2 text-sm text-[#6b7280] dark:text-[#a1a1aa] mx-4">
           <span>Welcome, Creator!</span>
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
         </div>

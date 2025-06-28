@@ -72,11 +72,11 @@ export default function AIScriptGenerator() {
     <div className=" section-container flex items-center justify-center p-4 py-10 md:py-14">
       <div className="w-full max-w-2xl">
         <div className="text-center mb-8">
-          <h1 className="text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-900 bg-clip-text text-transparent mb-6">
+          <h1 className="text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[#ff3898] to-purple-900 bg-clip-text text-transparent mb-6">
             AI Script Generator
           </h1>
 
-          <p className="text-center text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-center text-lg md:text-xl text-[#6b7280] dark:text-[#a1a1aa] max-w-2xl mx-auto leading-relaxed mb-8">
             Our advanced AI will create custom UGC scripts tailored to your
             specific product, niche, and target audience.
           </p>

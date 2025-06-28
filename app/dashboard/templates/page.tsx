@@ -51,7 +51,7 @@ const Templates = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="my-4 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[var(--firstColor)] to-purple-600 bg-clip-text text-transparent mb-6">
+          <h1 className="my-4 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[#ff3898] to-purple-600 bg-clip-text text-transparent mb-6">
             Templates Library
           </h1>
           <p className="textGray600 max-w-2xl mx-auto">
