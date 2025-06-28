@@ -1,11 +1,36 @@
 "use client";
+
 import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useRouter } from "next/navigation";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const router = useRouter();
+   const [darkMode, setDarkMode] = useState(false);
+  const [position, setPosition] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  });
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      setDarkMode(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -26,6 +51,7 @@ const Navbar = () => {
     <div className="relative">
       <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] shadow-sm py-4 lg:px-[120px]">
         <div className="navbar-start">
+          <button onClick={()=> setDarkMode(!darkMode)}>Toggle</button>
           {/* logo */}
           <button
             onClick={hinddleOnClick}

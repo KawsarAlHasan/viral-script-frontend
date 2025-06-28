@@ -14,7 +14,7 @@ import AIScriptSection from "./_components/AIScriptSection";
 export default function Home() {
   return (
    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300 mt-[82px]">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis esse odio magnam officia dolorem. Tempore iure nesciunt iusto dolores nihil, necessitatibus repellat! Reprehenderit dignissimos velit nemo aut voluptas minus consectetur.
+   <p className="text-red-500 dark:text-purple-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quidem optio. Dolore debitis id inventore laboriosam magni maiores temporibus veritatis?</p>
     <Header/>
 
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi aspernatur aut ex voluptatibus, totam corporis molestias eaque in rem beatae praesentium, a delectus excepturi! Earum exercitationem quidem ab ex molestias.

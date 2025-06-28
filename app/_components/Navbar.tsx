@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] py-4 lg:px-[120px]">
+      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] py-4 lg:px-[120px] ">
         {/* Mobile: Logo on left, Dropdown on right */}
         <div className="navbar-start  flex-1 lg:flex-none">
           <button
