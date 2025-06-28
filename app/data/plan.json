@@ -1,0 +1,62 @@
+[
+  {
+    "id": "creator",
+    "name": "Creator",
+    "icon": "Sparkles",
+    "iconColor": "text-pink-500",
+    "gradient": "from-pink-500 to-rose-500",
+    "monthlyPrice": 9.99,
+    "annualPrice": 7.99,
+    "annualOriginalPrice": 9.99,
+    "features": [
+      { "name": "Access to 200 scripts per month", "included": true },
+      { "name": "Script Library Access", "included": true },
+      { "name": "Downloadable Templates", "included": false },
+      { "name": "AI Script Generator", "included": false }
+    ],
+    "buttonText": "Choose Creator Plan",
+    "buttonStyle": "btn-secondary",
+    "popular": false,
+    "savings": null
+  },
+  {
+    "id": "pro",
+    "name": "Pro Creator",
+    "icon": "Crown",
+    "iconColor": "text-blue-500",
+    "gradient": "from-blue-500 to-purple-500",
+    "monthlyPrice": 24.99,
+    "annualPrice": 19.99,
+    "annualOriginalPrice": 24.99,
+    "features": [
+      { "name": "Access to 500 scripts per month", "included": true },
+      { "name": "Full Script Library Access", "included": true },
+      { "name": "Downloadable Templates", "included": true },
+      { "name": "AI Script Generator", "included": false }
+    ],
+    "buttonText": "Choose Pro Creator Plan",
+    "buttonStyle": "bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white",
+    "popular": true,
+    "savings": "Save 20%"
+  },
+  {
+    "id": "unlimited",
+    "name": "Unlimited",
+    "icon": "Zap",
+    "iconColor": "text-green-500",
+    "gradient": "from-green-500 to-emerald-500",
+    "monthlyPrice": 50,
+    "annualPrice": 40,
+    "annualOriginalPrice": 50,
+    "features": [
+      { "name": "Access to 1000+ scripts per month", "included": true },
+      { "name": "Full Script Library Access", "included": true },
+      { "name": "All Downloadable Templates", "included": true },
+      { "name": "Custom AI Script Generator", "included": true, "comingSoon": true }
+    ],
+    "buttonText": "Unlock Everything",
+    "buttonStyle": "bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white",
+    "popular": false,
+    "savings": null
+  }
+]
