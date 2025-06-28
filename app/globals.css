@@ -8,6 +8,25 @@
 
 
 
+/* styles/theme.css */
+.theme-container {
+  @apply min-h-screen bg-[#ffffff] dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] transition-colors duration-300 mt-[82px];
+}
+
+
+.c-button{
+  @apply bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+}
+
+
+
+
+.dark .c-button {
+  @apply from-[#07052c] to-[#301858] text-black shadow-lg hover:shadow-xl;
+}
+
+
+
 
 
 :root {

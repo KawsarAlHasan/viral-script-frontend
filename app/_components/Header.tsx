@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import {
   Play,
   Sparkles,
@@ -11,7 +10,6 @@ import {
   ArrowRight,
   Zap,
 } from "lucide-react";
-import image from "@/public/image.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Header = () => {
@@ -49,73 +47,9 @@ const Header = () => {
     },
   ];
 
-  const floatingWords = ["Viral", "Trending", "Engaging", "Creative"];
-
-  //   {/* Right Image/Video */}
-  //  <div className="relative card backdrop-blur-sm rounded-3xl p-6 shadow-2xl group-hover:scale-105 transition-transform duration-500">
-  //                 <div className="relative overflow-hidden rounded-2xl">
-  //                   {showVideo ? (
-  //                     <div className="relative">
-  //                       <button
-  //                         onClick={(e) => {
-  //                           e.stopPropagation();
-  //                           setShowVideo(false);
-  //                         }}
-  //                         className=" cursor-pointer absolute top-1 right-1 z-10 bg-white rounded-full p-1 shadow-lg hover:bg-gray-100 transition-colors"
-  //                       >
-  //                         <svg
-  //                           xmlns="http://www.w3.org/2000/svg"
-  //                           className="h-6 w-6 textGray600"
-  //                           fill="none"
-  //                           viewBox="0 0 24 24"
-  //                           stroke="currentColor"
-  //                         >
-  //                           <path
-  //                             strokeLinecap="round"
-  //                             strokeLinejoin="round"
-  //                             strokeWidth={2}
-  //                             d="M6 18L18 6M6 6l12 12"
-  //                           />
-  //                         </svg>
-  //                       </button>
-  //                       <iframe
-  //                         width="560"
-  //                         height="315"
-  //                         src="https://www.youtube.com/embed/9f0PlqjDwPU?si=eo2Q9dA_Rh-Uq140&autoplay=1"
-  //                         title="YouTube video player"
-  //                         frameBorder="0"
-  //                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  //                         referrerPolicy="strict-origin-when-cross-origin"
-  //                         allowFullScreen
-  //                         className="w-full h-auto md:h-[445px]"
-  //                       />
-  //                     </div>
-  //                   ) : (
-  //                     <div
-  //                       className="cursor-pointer"
-  //                       onClick={() => setShowVideo(true)}
-  //                     >
-  //                       <Image
-  //                         src={image}
-  //                         alt="Hero Image"
-  //                         width={500}
-  //                         height={500}
-  //                         className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
-  //                         priority
-  //                       />
-  //                       {/* Overlay Play Button */}
-  //                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20 backdrop-blur-sm">
-  //                         <div className="card rounded-full p-4 shadow-lg animate-pulse">
-  //                           <Play className="w-8 h-8 text-[var(--firstColor)] fill-current" />
-  //                         </div>
-  //                       </div>
-  //                     </div>
-  //                   )}
-  //                 </div>
-  //               </div>
 
   return (
-    <section id="home" className="relative section-container overflow-hidden">
+    <section id="home" className="relative  overflow-hidden bg-[#f9fafb] dark:bg-[#111111]">
       <div className="relative mx-2 lg:mx-[120px] py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Content */}

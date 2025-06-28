@@ -9,12 +9,7 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const router = useRouter();
    const [darkMode, setDarkMode] = useState(false);
-  const [position, setPosition] = useState({
-    left: 0,
-    width: 0,
-    opacity: 0,
-  });
-
+ 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
