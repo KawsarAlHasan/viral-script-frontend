@@ -201,7 +201,7 @@ const Header = () => {
 
           {/* Right Image/Video */}
           <div
-            className={`w-4/5 flex-1 transform transition-all duration-1000 delay-300 ${
+            className={`w-full md:w-4/5 flex-1 transform transition-all duration-1000 delay-300 ${
               isVisible
                 ? "translate-x-0 opacity-100"
                 : "translate-x-10 opacity-0"
@@ -243,7 +243,7 @@ const Header = () => {
                   </div>
 
                   {/* Main Image/Video Container */}
-                  <div className="relative card backdrop-blur-sm rounded-3xl p-6 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative card backdrop-blur-sm rounded-3xl p-3 md:p-5 shadow-2xl group-hover:scale-105 transition-transform duration-500">
                     <div className="relative overflow-hidden rounded-2xl">
                       <iframe
                         width="460"
