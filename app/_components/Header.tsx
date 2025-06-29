@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Play,
   Sparkles,
@@ -16,7 +16,7 @@ const Header = () => {
   const [isUser, setIsUser] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [activeStats, setActiveStats] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -24,6 +24,31 @@ const Header = () => {
       setActiveStats((prev) => (prev + 1) % 3);
     }, 2000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (videoRef.current) {
+        const rect = videoRef.current.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        // Send play/pause command to iframe
+        if (isInView) {
+          videoRef.current.src =
+            videoRef.current.src.replace("&autoplay=0", "") + "&autoplay=1";
+        } else {
+          videoRef.current.src =
+            videoRef.current.src.replace("&autoplay=1", "") + "&autoplay=0";
+        }
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const stats = [
@@ -47,9 +72,11 @@ const Header = () => {
     },
   ];
 
-
   return (
-    <section id="home" className="relative  overflow-hidden bg-[#f9fafb] dark:bg-[#111111]">
+    <section
+      id="home"
+      className="relative  overflow-hidden bg-[#f9fafb] dark:bg-[#111111]"
+    >
       <div className="relative mx-2 lg:mx-[120px] py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Content */}
@@ -220,63 +247,28 @@ const Header = () => {
                 <Sparkles className="w-6 h-6 text-purple-600" />
               </div>
 
-              {/* Main Image/Video Container */}
-              {/* Right Image/Video */}
-              <div
-                className={`flex-1 transform transition-all duration-1000 delay-300 ${
-                  isVisible
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-10 opacity-0"
-                }`}
-              >
-                <div className="relative group">
-                  {/* Decorative Elements */}
-                  <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[#ff3898]/20 to-purple-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-
-                  {/* Floating Action Buttons */}
-                  <div className="absolute -top-6 -right-6 card rounded-full p-3 shadow-lg animate-bounce border border-[#ff3898]/20">
-                    <TrendingUp className="w-6 h-6 text-[#ff3898]" />
-                  </div>
-
-                  <div className="absolute -bottom-6 -left-6 card rounded-full p-3 shadow-lg animate-pulse border border-purple-600/20">
-                    <Sparkles className="w-6 h-6 text-purple-600" />
-                  </div>
-
-                  {/* Main Image/Video Container */}
-                  <div className="relative card backdrop-blur-sm rounded-3xl p-3 md:p-5 shadow-2xl group-hover:scale-105 transition-transform duration-500">
-                    <div className="relative overflow-hidden rounded-2xl">
-                      <iframe
-                        width="460"
-                        height="315"
-                        src="https://www.youtube.com/embed/lW8bZkYEud8?si=lVHjc2ZsD4WeNedW&autoplay=1"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                        className="w-full h-auto md:h-[345px]"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Success Metrics Floating Card */}
-                  <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-2 shadow-lg animate-pulse">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-[#ff3898]">
-                        98%
-                      </div>
-                      <div className="text-xs text-secondary">Success Rate</div>
-                    </div>
-                  </div>
+              {/* Main Video Container */}
+              <div className="relative card backdrop-blur-sm rounded-3xl p-3 md:p-5 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <iframe
+                    ref={videoRef}
+                    width="460"
+                    height="315"
+                    src="https://www.youtube.com/embed/lW8bZkYEud8?si=lVHjc2ZsD4WeNedW&autoplay=1&mute=1"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-auto md:h-[345px]"
+                  />
                 </div>
               </div>
 
               {/* Success Metrics Floating Card */}
               <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-2 shadow-lg animate-pulse">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#ff3898]">
-                    98%
-                  </div>
+                  <div className="text-2xl font-bold text-[#ff3898]">98%</div>
                   <div className="text-xs text-secondary">Success Rate</div>
                 </div>
               </div>
