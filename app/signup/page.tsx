@@ -49,7 +49,7 @@ export default function SignUpPage() {
   return (
     <div>
       <LoginNavber />
-      <div className="min-h-screen mt-[-88px] flex items-center justify-center p-4">
+      <div className="min-h-screen mt-[-85px] flex items-center justify-center p-4">
         <div className="card w-full max-w-md shadow-xl">
           <div className="card-body">
             <h2 className="text-2xl font-bold text-center mb-4">
