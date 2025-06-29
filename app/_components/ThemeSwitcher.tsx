@@ -3,17 +3,22 @@
 import React, { useEffect, useState } from "react";
 
 const ThemeSwitcher = () => {
-
- const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      setDarkMode(true);
-    }
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    const initialMode = savedTheme 
+      ? savedTheme === "dark" 
+      : prefersDark;
+    
+    setDarkMode(initialMode);
   }, []);
 
   useEffect(() => {
+    if (darkMode === undefined) return;
+    
     if (darkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -23,12 +28,16 @@ const ThemeSwitcher = () => {
     }
   }, [darkMode]);
 
+  if (darkMode === undefined) {
+    return null;
+  }
+
   return (
     <label className="swap swap-rotate cursor-pointer">
       <input
         type="checkbox"
         onChange={() => setDarkMode(!darkMode)}
-        checked={!darkMode} // Checked means light mode
+        checked={darkMode}
       />
 
       {/* Sun Icon (light mode) */}
