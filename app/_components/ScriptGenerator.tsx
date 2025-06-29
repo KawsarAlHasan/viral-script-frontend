@@ -72,7 +72,7 @@ export default function AIScriptGenerator() {
     <div className=" section-container flex items-center justify-center p-4 py-10 md:py-14">
       <div className="w-full max-w-2xl">
         <div className="text-center mb-8">
-          <h1 className="text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[#ff3898] to-purple-900 bg-clip-text text-transparent mb-6">
+          <h1 className="text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#111827] via-[#ff3898] to-purple-900 dark:from-[#ededed] bg-clip-text text-transparent mb-6">
             AI Script Generator
           </h1>
 

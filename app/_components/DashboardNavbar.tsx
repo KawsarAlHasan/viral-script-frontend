@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -6,7 +5,7 @@ const DashboardNavbar = () => {
   return (
     <div className="">
       {/* sticky top-0 z-50 */}
-      <div className="navbar bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] py-4 px-4 lg:px-[120px]">
+      <div className="navbar bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95 border-b border-[#e5e7eb] dark:border-[#2a2a2a] py-4 px-4 lg:px-[120px]">
         {/* Logo Section - Fixed the flex issue */}
         <div className="flex-1">
           <Link
@@ -52,7 +51,7 @@ const DashboardNavbar = () => {
           </div>
 
           {/* User Avatar Dropdown */}
-          <div className="dropdown dropdown-end mx-1">
+          <div className="dropdown dropdown-end mx-2 md:mx-4">
             <div
               tabIndex={0}
               role="button"
@@ -67,7 +66,7 @@ const DashboardNavbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white dark:bg-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
                 <a className="justify-between">

@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useRouter } from "next/navigation";
 
@@ -15,7 +14,7 @@ const LoginNavber = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="navbar bg-[var(--navbar-bg)]/95 border-b border-[var(--navbar-border)] py-4 px-4 lg:px-[120px]">
+      <div className="navbar bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95 border-b border-[#e5e7eb] dark:border-[#2a2a2a] py-4 px-4 lg:px-[120px]">
         {/* Logo Section - Fixed the flex issue */}
         <div className="flex-1">
           <button

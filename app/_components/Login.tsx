@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 
 type LoginFormInputs = {
   email: string;
@@ -19,6 +20,7 @@ const Login = () => {
   } = useForm<LoginFormInputs>();
 
   const [isClient, setIsClient] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); 
 
   useEffect(() => {
     setIsClient(true);
@@ -30,38 +32,23 @@ const Login = () => {
     localStorage.setItem("password", data.password);
 
     router.push("/dashboard");
-
-    // // Wait for client-side values to be available
-    // const currentBillingPeriod = localStorage.getItem("billingPeriod");
-    // const currentPlanId = localStorage.getItem("planId");
-
-    // if (!currentBillingPeriod && !currentPlanId) {
-    //   router.push("/dashboard");
-    // } else {
-    //   router.push("/payment");
-    // }
-
-    (
-      document.getElementById("login_modal_button") as HTMLDialogElement
-    )?.close();
   };
 
-  // Only render the form when we're on the client side
   if (!isClient) {
-    return null; // or a loading spinner
+    return null;
   }
 
   return (
     <div>
       <h1 className="text-2xl font-bold text-center my-4">Login now!</h1>
-      <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
+      <div className="card w-full shrink-0 shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <fieldset className="fieldset">
             <label className="label">Email</label>
             <input
               type="email"
               placeholder="email@example.com"
-              className="input w-full"
+              className="input w-full bg-white dark:bg-black"
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && (
@@ -70,14 +57,27 @@ const Login = () => {
               </p>
             )}
             <label className="label">Password</label>
-            <input
-              type="password"
-              placeholder="type your password..."
-              className="input input-bordered w-full"
-              {...register("password", {
-                required: "Password is required",
-              })}
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="type your password..."
+                className="input input-bordered w-full bg-white dark:bg-black pr-10"
+                {...register("password", {
+                  required: "Password is required",
+                })}
+              />
+              <button
+                type="button"
+                className="z-100 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <FaRegEyeSlash className="w-5 h-5" /> 
+                ) : (
+                  <FaRegEye className="w-5 h-5" /> 
+                )}
+              </button>
+            </div>
             {errors.password && (
               <p className="text-red-500 text-sm mt-1">
                 {errors.password.message}

@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Navbar from './_components/Navbar'
-import Navbar2 from './_components/Navbar2'
+
 
 export default function NavbarWrapper() {
   const pathname = usePathname()
@@ -14,5 +14,5 @@ export default function NavbarWrapper() {
 
   if (isDashboard || isSignup || isLogin || isPayment || isPricing) return null
 
-  return <Navbar2 />
+  return <Navbar />
 }

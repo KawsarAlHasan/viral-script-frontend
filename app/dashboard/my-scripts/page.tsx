@@ -70,7 +70,7 @@ const MyScripts = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="my-4 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--text-primary)] via-[#ff3898] to-purple-600 bg-clip-text text-transparent mb-6">
+          <h1 className="my-4 text-center text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#111827] via-[#ff3898] dark:from-[#ededed]  to-purple-600 bg-clip-text text-transparent mb-6">
             My Scripts
           </h1>
           <p className="max-w-2xl mx-auto textGray600">
@@ -88,7 +88,7 @@ const MyScripts = () => {
             <input
               type="text"
               placeholder="Search scripts..."
-              className="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="bg-white dark:bg-black pl-10 pr-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

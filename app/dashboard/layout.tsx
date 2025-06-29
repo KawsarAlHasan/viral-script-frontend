@@ -3,15 +3,7 @@ import "../globals.css";
 import Link from "next/link";
 import DashboardNavbar from "../_components/DashboardNavbar";
 import { IconType } from "react-icons";
-import {
-  FiHome,
-  FiSettings,
-  FiPieChart,
-  FiUsers,
-  FiFileText,
-  FiShoppingCart,
-  FiHelpCircle,
-} from "react-icons/fi";
+import { FiHome, FiSettings, FiHelpCircle } from "react-icons/fi";
 import { GrTemplate } from "react-icons/gr";
 import { SiPurescript } from "react-icons/si";
 import { RiOpenaiFill } from "react-icons/ri";
@@ -37,10 +29,6 @@ const navItems: NavItem[] = [
   },
   { name: "My Scripts", href: "/dashboard/my-scripts", icon: SiPurescript },
   { name: "Templates", href: "/dashboard/templates", icon: GrTemplate },
-  // { name: "Analytics", href: "/dashboard/analytics", icon: FiPieChart },
-  // { name: "Users", href: "/dashboard/users", icon: FiUsers },
-  // { name: "Documents", href: "/dashboard/documents", icon: FiFileText },
-  // { name: "Products", href: "/dashboard/products", icon: FiShoppingCart },
   { name: "Settings", href: "/dashboard/settings", icon: FiSettings },
   { name: "Help Center", href: "/dashboard/helps", icon: FiHelpCircle },
 ];
@@ -59,13 +47,13 @@ export default function RootLayout({
 
         <div className="drawer-side h-[1000px] md:h-screen">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <aside className="w-80 h-full bg-[var(--navbar-bg)]/95 border-[var(--navbar-border)] border-r ">
+          <aside className="w-80 h-full bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95 border-[#e5e7eb] dark:border-[#2a2a2a] border-r ">
             <nav className="flex flex-col px-2 md:pt-3">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center py-3 nav-link text-[var(--navbar-text)] hover:text-[#ff3898] px-4  rounded-lg transition-all duration-300 hover:bg-[var(--navbar-hover)] cursor-pointer font-medium"
+                  className="flex items-center py-3 nav-link text-[#171717] dark:text-[#ededed] hover:text-[#ff3898] px-4  rounded-lg transition-all duration-300 hover:bg-[#f3f4f6] dark:hover:bg-[#2a2a2a] cursor-pointer font-medium"
                 >
                   <item.icon className="w-5 h-5 mr-3" />
                   <span className="font-medium">{item.name}</span>

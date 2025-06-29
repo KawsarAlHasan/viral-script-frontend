@@ -120,7 +120,7 @@ Don't miss out — experience the difference today!
                           {...register("productName", { required: true })}
                           type="text"
                           placeholder="e.g. GlowBoost Serum"
-                          className="input w-full px-4 py-3 rounded-xl focus:outline-none input-lg transition-all duration-200"
+                          className="bg-white dark:bg-black input w-full px-4 py-3 rounded-xl focus:outline-none input-lg transition-all duration-200"
                         />
                         
                         {errors.productName && (
@@ -134,7 +134,7 @@ Don't miss out — experience the difference today!
                         </label>
                         <select
                           {...register("productCategory", { required: true })}
-                          className="select select-lg w-full px-4 py-3 rounded-xl focus:outline-none transition-all duration-200 cursor-pointer"
+                          className="bg-white dark:bg-black select select-lg w-full px-4 py-3 rounded-xl focus:outline-none transition-all duration-200 cursor-pointer"
                         >
                           <option disabled value="">
                             Select a category
@@ -160,7 +160,7 @@ Don't miss out — experience the difference today!
                         <input
                           {...register("keyBenefits", { required: true })}
                           placeholder="e.g. Reduces fine lines, Hydrates for 24 hours"
-                          className="input input-lg w-full px-4 py-3 rounded-xl  focus:outline-none transition-all duration-200"
+                          className="bg-white dark:bg-black input input-lg w-full px-4 py-3 rounded-xl  focus:outline-none transition-all duration-200"
                          
                         />
                         {errors.keyBenefits && (
@@ -175,7 +175,7 @@ Don't miss out — experience the difference today!
                         <input
                           {...register("targetAudience", { required: true })}
                           placeholder="e.g. Women 25-45 with dry, sensitive skin"
-                          className="input input-lg w-full px-4 py-3 rounded-xl  focus:outline-none transition-all duration-200"
+                          className="bg-white dark:bg-black input input-lg w-full px-4 py-3 rounded-xl  focus:outline-none transition-all duration-200"
                         />
                         {errors.targetAudience && (
                           <span className="text-red-300 text-sm">Required</span>

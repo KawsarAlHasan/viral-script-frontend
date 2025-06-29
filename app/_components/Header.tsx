@@ -246,7 +246,7 @@ const Header = () => {
                   <div className="relative card backdrop-blur-sm rounded-3xl p-6 shadow-2xl group-hover:scale-105 transition-transform duration-500">
                     <div className="relative overflow-hidden rounded-2xl">
                       <iframe
-                        width="560"
+                        width="460"
                         height="315"
                         src="https://www.youtube.com/embed/lW8bZkYEud8?si=lVHjc2ZsD4WeNedW&autoplay=1"
                         title="YouTube video player"
@@ -254,7 +254,7 @@ const Header = () => {
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
-                        className="w-full h-auto md:h-[445px]"
+                        className="w-full h-auto md:h-[345px]"
                       />
                     </div>
                   </div>

@@ -219,7 +219,7 @@ const MemberDashboard = () => {
 
                 <div className="space-y-4">
                   {recentScripts.map((script) => (
-                    <div key={script.id} className="flex items-center gap-2 md:gap-4 p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[var(--card-hover)] transition-colors group cursor-pointer">
+                    <div key={script.id} className="flex items-center gap-2 md:gap-4 p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[#f9fafb] dark:hover:bg-[#2a2a2a] transition-colors group cursor-pointer">
                       <div className="flex-shrink-0">
                         <div className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                           <Play className="w-5 h-5 text-white" />
@@ -273,7 +273,7 @@ const MemberDashboard = () => {
 
               <div className="space-y-3">
                 {downloadTemplates.map((template, index) => (
-                  <div key={index} className="flex items-center justify-between p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[var(--card-hover)] transition-colors group">
+                  <div key={index} className="flex items-center justify-between p-2 md:p-4 bg-[#f9fafb] dark:bg-[#111111] rounded-xl hover:bg-[#f9fafb] dark:hover:bg-[#2a2a2a] transition-colors group">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <FileText className="w-5 h-5 text-blue-600" />
@@ -320,7 +320,7 @@ const MemberDashboard = () => {
                     onClick={() => setSelectedNiche(niche)}
                     className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-colors ${selectedNiche === niche
                       ? 'bg-pink-100 text-pink-800 border border-pink-200'
-                      : 'bg-[#f9fafb] dark:bg-[#111111] text-[#6b7280] dark:text-[#a1a1aa] hover:bg-[var(--card-hover)]'
+                      : 'bg-[#f9fafb] dark:bg-[#111111] text-[#6b7280] dark:text-[#a1a1aa] hover:bg-[#f9fafb] dark:hover:bg-[#2a2a2a]'
                       }`}
                   >
                     {niche}
