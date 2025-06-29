@@ -201,7 +201,7 @@ const Header = () => {
 
           {/* Right Image/Video */}
           <div
-            className={`flex-1 transform transition-all duration-1000 delay-300 ${
+            className={`w-4/5 flex-1 transform transition-all duration-1000 delay-300 ${
               isVisible
                 ? "translate-x-0 opacity-100"
                 : "translate-x-10 opacity-0"
@@ -260,7 +260,7 @@ const Header = () => {
                   </div>
 
                   {/* Success Metrics Floating Card */}
-                  <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-4 shadow-lg animate-pulse">
+                  <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-2 shadow-lg animate-pulse">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-[#ff3898]">
                         98%
@@ -272,7 +272,7 @@ const Header = () => {
               </div>
 
               {/* Success Metrics Floating Card */}
-              <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-4 shadow-lg animate-pulse">
+              <div className="absolute top-1/2 -right-8 card backdrop-blur-sm rounded-2xl p-2 shadow-lg animate-pulse">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[#ff3898]">
                     98%
