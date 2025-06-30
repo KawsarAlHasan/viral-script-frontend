@@ -72,12 +72,25 @@ const Header = () => {
     },
   ];
 
+  const handleClick = () => {
+    if (isUser) {
+      console.log("proccess upcomming");
+    } else {
+      const modal = document.getElementById(
+        "login_modal_button",
+      ) as HTMLDialogElement | null;
+      if (modal) {
+        modal.showModal();
+      }
+    }
+  };
+
   return (
     <section
       id="home"
       className="relative  overflow-hidden bg-[#f9fafb] dark:bg-[#111111]"
     >
-      <div className="relative mx-2 lg:mx-[120px] py-10 lg:py-14">
+      <div className="relative mx-4 lg:mx-[60px] xl:mx-[105px] py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Left Content */}
           <div
@@ -89,7 +102,7 @@ const Header = () => {
           >
             {/* Main Heading */}
             <div className="mb-6">
-              <h1 className="text-[26px] md:text-[50px] font-extrabold leading-tight text-primary">
+              <h1 className="text-[26px] md:text-[30px] lg:text-[35px] xl:text-[50px] font-extrabold leading-tight text-primary">
                 <span className="block transform hover:scale-105 transition-transform duration-300">
                   Unlock the Secret to
                 </span>
@@ -140,66 +153,33 @@ const Header = () => {
             </div>
 
             {/* Action Buttons */}
-            {isUser ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:w-3/4">
-                <button className="cursor-pointer btn-primary group relative px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <div className="relative flex items-center gap-2">
-                    <Play className="w-5 h-5" />
-                    Browse Scripts
-                  </div>
-                </button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-3 lg:gap-4 xl:gap-5 w-full xl:w-4/5">
+              {/* Primary Button */}
+              <button
+                onClick={handleClick}
+                className="relative group btn-primary overflow-hidden px-6 py-3 sm:px-7 sm:py-3.5 md:px-6 md:py-3 lg:px-7 lg:py-4 xl:px-8 xl:py-4 rounded-2xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-95"
+              >
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
 
-                <button className="cursor-pointer group bg-[#00ff8c] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[#ff3898]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  <div className="flex items-center gap-2">
-                    Generate Your Own
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    <span className="text-xl mt-[1px] transform transition-transform duration-2000 ease-in-out group-hover:translate-x-2">
-                      <FaLongArrowAltRight />
-                    </span>
-                  </div>
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:w-3/4">
-                <button
-                  onClick={() => {
-                    const modal = document.getElementById(
-                      "login_modal_button",
-                    ) as HTMLDialogElement | null;
-                    if (modal) {
-                      modal.showModal();
-                    }
-                  }}
-                  className="cursor-pointer btn-primary group relative px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  <div className="relative flex items-center gap-2">
-                    <Play className="w-5 h-5" />
-                    Browse Scripts
-                  </div>
-                </button>
+                {/* Button content */}
+                <div className="relative flex items-center justify-center gap-1.5 sm:gap-2">
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  <span className="whitespace-nowrap">Browse Scripts</span>
+                </div>
+              </button>
 
-                <button
-                  onClick={() => {
-                    const modal = document.getElementById(
-                      "login_modal_button",
-                    ) as HTMLDialogElement | null;
-                    if (modal) {
-                      modal.showModal();
-                    }
-                  }}
-                  className="cursor-pointer group bg-[#00ff8c] text-black px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-transparent hover:border-[#ff3898]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  <div className="flex items-center gap-2">
-                    Generate Your Own
-                    <span className="text-xl mt-[1px] transform transition-transform duration-2000 ease-in-out group-hover:translate-x-2">
-                      <FaLongArrowAltRight />
-                    </span>
-                  </div>
-                </button>
-              </div>
-            )}
+              {/* Secondary Button */}
+              <button
+                onClick={handleClick}
+                className="group relative bg-[#00ff8c] hover:bg-[#00e67d] text-black px-6 py-3 sm:px-7 sm:py-3.5 md:px-6 md:py-3 lg:px-7 lg:py-4 xl:px-8 xl:py-4 rounded-2xl font-semibold text-base sm:text-lg border-2 border-transparent hover:border-[#ff3898]/30 transition-all duration-300 hover:scale-[1.03] active:scale-95 hover:shadow-lg"
+              >
+                <div className="flex items-center justify-center gap-1.5 sm:gap-2">
+                  <span className="whitespace-nowrap">Generate Your Own</span>
+                  <FaLongArrowAltRight className="text-xl mt-0.5 transform transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-2" />
+                </div>
+              </button>
+            </div>
 
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 mt-8 text-sm text-muted">
@@ -260,7 +240,7 @@ const Header = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    className="w-full h-auto md:h-[345px]"
+                    className="w-full h-auto md:h-[300px]"
                   />
                 </div>
               </div>

@@ -24,12 +24,12 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95  border-b border-[#e5e7eb] dark:border-[#2a2a2a] shadow-sm py-4 lg:px-[120px]">
+      <div className="navbar fixed top-0 right-0 left-0 z-50 navbar-backdrop bg-[#ffffff]/95 dark:bg-[#1a1a1a]/95  border-b border-[#e5e7eb] dark:border-[#2a2a2a] shadow-sm py-4 px-2 md:px-4 lg:px-[60px] xl:px-[105px]">
         <div className="navbar-start">
           {/* logo */}
           <button
             onClick={hinddleOnClick}
-            className="flex items-center space-x-1 lg:space-x-3 logo-container cursor-pointer lg:mr-4"
+            className="flex items-center space-x-1 lg:space-x-2 xl:space-x-3 logo-container cursor-pointer lg:mr-4"
           >
             <div className="relative">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
@@ -55,12 +55,12 @@ const Navbar = () => {
           </button>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-6 px-1">
+          <ul className="menu menu-horizontal  xl:gap-6 px-1">
             {navItems.map((item, index) => (
               <li key={index}>
                 <Link
                   href={item.href}
-                  className="nav-link text-[#171717] dark:text-[#ededed] hover:text-[#ff3898] px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[#f3f4f6] dark:hover:bg-[#2a2a2a] cursor-pointer font-medium"
+                  className="nav-link text-[#171717] dark:text-[#ededed] hover:text-[#ff3898] xl:px-4 py-2 rounded-lg transition-all duration-300 hover:bg-[#f3f4f6] dark:hover:bg-[#2a2a2a] cursor-pointer font-medium"
                 >
                   {item.name}
                 </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content card rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {navItems.map((item, index) => (
                 <li key={index}>
@@ -126,10 +126,10 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end hidden lg:flex ">
-          <div className="mr-4">
+          <div className="mr-1 xl:mr-4">
             <ThemeSwitcher />
           </div>
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-2 xl:gap-4">
             <li>
               <Link
                 href="/login"
@@ -142,7 +142,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/signup"
-                className="group font-semibold md:px-6 rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[#ff3898] px-4 py-2 transition-all duration-300 hover:bg-[#f3f4f6] dark:hover:bg-[#2a2a2a] cursor-pointer"
+                className="group font-semibold rounded-full btn-primary hover:shadow-lg  hover:scale-105   bg-blue-400 text-white nav-link hover:text-[#ff3898] px-2 xl:px-4 py-2 transition-all duration-300 hover:bg-[#f3f4f6] dark:hover:bg-[#2a2a2a] cursor-pointer"
               >
                 AI Generator
               </Link>
